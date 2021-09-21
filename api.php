@@ -27,6 +27,6 @@ if(isset($data["password"]) && $data["password"] == "KickPHP") {
 
     echo json_encode($error);
 }
-.
+
 ?>
 
