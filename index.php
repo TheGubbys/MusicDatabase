@@ -1,6 +1,16 @@
 <?php
 require "settings/init.php";
 
+if(!empty($_GET["type"])) {
+    if($_GET["type"] == "delete") {
+        $id = $_GET["id"];
+
+        $db->sql("DELETE FROM music WHERE musicID = :musicID", [":musicID"=>$id], false);
+
+        header("Location: index.php");
+    }
+}
+
 $music = $db->sql("SELECT * FROM music");
 ?>
 
@@ -24,22 +34,28 @@ $music = $db->sql("SELECT * FROM music");
 <body>
     <?php
 
-    foreach ($music as $music){
+    foreach ($music as $song){
     ?>
     <div class="row">
-        <div class="col-12 col-md-6 bg-primary">
+        <div class="col-12 col-md-4 bg-primary ">
             <?php
-                echo $music->musicAuthor;
+                echo $song->musicAuthor;
              ?>
         </div>
-        <div class="col-12 col-md-6 bg-secondary">
+        <div class="col-12 col-md-4 bg-secondary">
             <?php
-                echo $music->musicTitle;
+                echo $song->musicTitle;
             ?>
         </div>
-        <div class="col-12 bg-success">
+        <div class="col-12 col-md-2">
+            <a href="index.php?type=edit&id=<?php $song->musicID; ?>">Edit</a>
+        </div>
+        <div class="col-12 col-md-2">
+            <a href="index.php?type=delete&id=<?php $song->musicID; ?>">Delete</a>
+        </div>
+        <div class="col-12 col-md-12 bg-success">
             <?php
-            echo $music->musicDesc;
+            echo $song->musicDesc;
             ?>
         </div>
     </div>
