@@ -52,15 +52,38 @@ $music = $db->sql("SELECT * FROM music");
                                 ?>
                             </h1>
                         </div>
+                        <div class="text-center p-3">
+                            <img class="w-100 h-100" src="uploads/<?php
+                            echo $song->musicArt;
+                            ?>">
+                        </div>
                         <div class="row text-center">
+                            <div class="col-6 p-2">
+                                <p>Genre:</p>
+                            </div>
                             <div class="col-6 p-2">
                                 <?php
                                 echo $song->musicGenre;
                                 ?>
                             </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-6 p-2">
+                                <p>Finished:</p>
+                            </div>
                             <div class="col-6 p-2">
                                 <?php
                                 echo $song->musicFinDate;
+                                ?>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-6 p-2">
+                                <p>Submitted:</p>
+                            </div>
+                            <div class="col-6 p-2">
+                                <?php
+                                echo $song->musicSubDate;
                                 ?>
                             </div>
                         </div>
