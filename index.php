@@ -52,21 +52,42 @@ $music = $db->sql("SELECT * FROM music");
                                 ?>
                             </h1>
                         </div>
-                        <div class="row">
-                            <div class="col-6 pt-2 text-center">
-                                <a class="btn btn-outline-warning" href="edit.php?type=edit&id=<?php echo $song->musicID; ?>">Edit</a>
+                        <div class="row text-center">
+                            <div class="col-6 p-2">
+                                <?php
+                                echo $song->musicGenre;
+                                ?>
                             </div>
-                            <div class="col-6 pt-2 text-center">
-                                <a class="btn btn-outline-danger" href="index.php?type=delete&id=<?php echo $song->musicID; ?>">Delete</a>
+                            <div class="col-6 p-2">
+                                <?php
+                                echo $song->musicFinDate;
+                                ?>
                             </div>
                         </div>
-                        <div class="p-2">
+                        <div class="p-2 border-top border-bottom border-primary border-2">
                             <?php
                             echo $song->musicDesc;
                             ?>
                         </div>
-                        <div class="py-2 text-center">
-                            <a class="btn btn-outline-success" href="index.php?type=delete&id=<?php echo $song->musicID; ?>">More Details</a>
+                        <div class="row text-center">
+                            <div class="p-2 col-6">
+                                <a class="btn btn-outline-secondary" href="<?php
+                                echo $song->musicLink;
+                                ?>">Song Link</a>
+                            </div>
+                            <div class="p-2 col-6">
+                                <a class="btn btn-outline-secondary" href="<?php
+                                echo $song->musicSoMe;
+                                ?>">SoMe</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 py-2 text-center">
+                                <a class="btn btn-outline-warning" href="edit.php?type=edit&id=<?php echo $song->musicID; ?>">Edit</a>
+                            </div>
+                            <div class="col-6 py-2 text-center">
+                                <a class="btn btn-outline-danger" href="index.php?type=delete&id=<?php echo $song->musicID; ?>">Delete</a>
+                            </div>
                         </div>
                     </div>
                 </div>
