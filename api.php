@@ -6,7 +6,7 @@ $data = json_decode(file_get_contents('php://input'), true);
 
 header('Content-Type: application/json; charset=utf-8');
 
-if(isset($data["password"]) && $data["password"] == "KickPHP") {
+if(isset($data["password"]) && $data["password"] == "SuperSecretPassword1234") {
 
     $sql = "SELECT * FROM music WHERE 1=1";
     $bind = [];
@@ -24,6 +24,11 @@ if(isset($data["password"]) && $data["password"] == "KickPHP") {
     if(!empty($data["subSearch"])){
         $sql = " AND musicSubDate = :musicSubDate ";
         $bind[":musicSubDate"] = $data["musicSubDate"];
+    }
+
+    if(!empty($data["genreSearch"])){
+        $sql = " AND musicGenre = :musicGenre ";
+        $bind[":musicGenre"] = $data["musicGenre"];
     }
 
 
