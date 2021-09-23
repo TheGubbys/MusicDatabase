@@ -32,36 +32,50 @@ $music = $db->sql("SELECT * FROM music");
     </head>
 
 <body>
-    <?php
 
-    foreach ($music as $song){
-    ?>
+<div class="container p-3">
     <div class="row">
-        <div class="col-12 col-md-4 bg-primary ">
-            <?php
-                echo $song->musicAuthor;
-             ?>
-        </div>
-        <div class="col-12 col-md-4 bg-secondary">
-            <?php
-                echo $song->musicTitle;
-            ?>
-        </div>
-        <div class="col-12 col-md-2">
-            <a href="index.php?type=edit&id=<?php $song->musicID; ?>">Edit</a>
-        </div>
-        <div class="col-12 col-md-2">
-            <a href="index.php?type=delete&id=<?php $song->musicID; ?>">Delete</a>
-        </div>
-        <div class="col-12 col-md-12 bg-success">
-            <?php
-            echo $song->musicDesc;
-            ?>
-        </div>
-    </div>
     <?php
-}
+    foreach ($music as $song){
+        ?>
+                <div class="col-12 col-md-6 col-lg-4 pt-2">
+                    <div class="border-primary border border-3 h-100">
+                        <div>
+                            <h5 class="text-center pt-2"><?php
+                                echo $song->musicAuthor;
+                                ?></h5>
+                        </div>
+                        <div class="py-2 border-bottom border-primary border-2">
+                            <h1 class="text-center">
+                                <?php
+                                echo $song->musicTitle;
+                                ?>
+                            </h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 pt-2 text-center">
+                                <a class="btn btn-outline-warning" href="edit.php?type=edit&id=<?php echo $song->musicID; ?>">Edit</a>
+                            </div>
+                            <div class="col-6 pt-2 text-center">
+                                <a class="btn btn-outline-danger" href="index.php?type=delete&id=<?php echo $song->musicID; ?>">Delete</a>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <?php
+                            echo $song->musicDesc;
+                            ?>
+                        </div>
+                        <div class="py-2 text-center">
+                            <a class="btn btn-outline-success" href="index.php?type=delete&id=<?php echo $song->musicID; ?>">More Details</a>
+                        </div>
+                    </div>
+                </div>
+        <?php
+    }
     ?>
+    </div>
+</div>
+
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -16,6 +16,17 @@ if(isset($data["password"]) && $data["password"] == "KickPHP") {
         $bind[":musicTitle"] = $data["titleSearch"];
     }
 
+    if(!empty($data["authorSearch"])){
+        $sql = " AND musicAuthor = :musicAuthor ";
+        $bind[":musicAuthor"] = $data["authorSearch"];
+    }
+
+    if(!empty($data["subSearch"])){
+        $sql = " AND musicSubDate = :musicSubDate ";
+        $bind[":musicSubDate"] = $data["musicSubDate"];
+    }
+
+
     $music = $db->sql($sql, $bind);
     header("HTTP/1.1 200 OK");
 
