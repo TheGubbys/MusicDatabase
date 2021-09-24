@@ -8,7 +8,7 @@ header('Content-Type: application/json; charset=utf-8');
 
 if(isset($data["password"]) && $data["password"] == "SuperSecretPassword1234") {
 
-    $sql = "SELECT * FROM music WHERE 1=1";
+    $sql = "SELECT * FROM music WHERE 1=1 ORDER BY musicSubDate DESC";
     $bind = [];
 
     if(!empty($data["titleSearch"])){
