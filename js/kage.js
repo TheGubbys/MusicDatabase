@@ -2,6 +2,19 @@ export default class Kage{
     constructor() {
     }
 
+    async kageEllerHvad(){
+
+        try{
+            const responseKage = await this.skalKimGiveKage(true);
+            console.log(responseKage);
+
+            const responseSize = await this.erDetEnStorKage('small');
+            console.log(responseSize);
+        }catch(error) {
+            console.log('Fejl: ' + error)
+        }
+    }
+
     skalKimGiveKage(erKimKommetForSent){
         return new Promise((resolve, reject) =>{
 
