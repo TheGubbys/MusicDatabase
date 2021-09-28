@@ -17,22 +17,33 @@
 
 <body>
 
-<body>
-<div class="container">
-	<div class='col-4 p-2 align-items-center text-center'>
-		<div class='row'>
-			<h1>Success!</h1>
-			<p>Your song was uploaded!</p>
-			<div class='p-2'>
-				<a class='btn btn-outline-primary text-center' href='insert.php'>Submit another song!</a>
-			</div>
-		</div>
-	</div>
-</div>
-</body>
 
 
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module">
+	import Kage from "./js/kage.js";
+
+	const kage = new Kage();
+
+	kage.skalKimGiveKage(true).then((response) => {
+		console.log(response);
+
+		kage.erDetEnStorKage('large').then((response) =>{
+
+			console.log(response);
+
+		}).catch((error) =>{
+
+			console.log(error);
+
+		});
+
+	}).catch((error) =>{
+		console.log(error);
+	});
+
+
+</script>
 </body>
 </html>
