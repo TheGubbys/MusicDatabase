@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Kim",
+    "age": "77",
+    "image": "kim.jpg",
+    "favoriteColors": ["red", "green"],
+    "hobbies": {
+      "CS:GO": "Good",
+      "badminton": {
+        "level": "noob",
+        "nextLevel": "good"
+      }
+    }
+  },
+  {
+    "name": "Glen",
+    "age": "32",
+    "image": "glen.jpg",
+    "favoriteColors": ["blue", "yellow"],
+    "hobbies": {
+      "CS:GO": "noob",
+      "badminton": "fremragende"
+    }
+  }
+]
