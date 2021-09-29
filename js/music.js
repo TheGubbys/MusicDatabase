@@ -7,9 +7,15 @@ export default class Music {
         this.rootElem = document.querySelector('.music');
         this.filter = this.rootElem.querySelector('.filter');
         this.items = this.rootElem.querySelector('.items');
+
+        this.titleSearch = this.filter.querySelector('.titleSearch')
     }
 
     async init(){
+        this.titleSearch.addEventListener('input', () => {
+            this.render();
+        })
+
         await this.render();
     }
 
@@ -25,19 +31,25 @@ export default class Music {
 
 
             col.innerHTML = `
-                <div class="card">
-                    <img src="uploads/${item.musicArt}" class="card-img-top">
+                <div class="card border-0">
+                    <img class="card-img-top" src="uploads/${item.musicArt}" onerror="if (this.src != 'uploads/noArt.jpg') this.src = 'uploads/noArt.jpg';">
+                    <h5 class="text-center cardd-title">${item.musicTitle}</h5>
+                    <p class="pb-2 card-text">Composed by ${item.musicAuthor}</p>
+                    <a href="music.php?musicID=${item.musicID}" class="btn btn-primary text-white w-100">Learn more</a>
                 </div>
             `;
 
             row.appendChild(col);
         }
 
+        this.items.innerHTML = '';
         this.items.appendChild(row);
 
     }
 
     async getData(){
+        this.data.nameSearch = this.titleSearch.value;
+
         const response = await fetch('api.php', {
             method: "POST",
             body: JSON.stringify(this.data)
