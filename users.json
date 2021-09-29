@@ -6,10 +6,7 @@
     "favoriteColors": ["red", "green"],
     "hobbies": {
       "CS:GO": "Good",
-      "badminton": {
-        "level": "noob",
-        "nextLevel": "good"
-      }
+      "badminton": "noob"
     }
   },
   {
