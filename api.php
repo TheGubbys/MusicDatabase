@@ -12,7 +12,7 @@ if(isset($data["password"]) && $data["password"] == "SuperSecretPassword1234") {
     $bind = [];
 
     if(!empty($data["titleSearch"])){
-        $sql .= " AND musicTitle LIKE CONCAT('%', :musicTitle, '%') ";
+        $sql .= " AND (musicTitle LIKE CONCAT('%', :musicTitle, '%') ";
         $bind[":musicTitle"] = $data["titleSearch"];
     }
 
@@ -21,15 +21,16 @@ if(isset($data["password"]) && $data["password"] == "SuperSecretPassword1234") {
         $bind[":musicAuthor"] = $data["authorSearch"];
     }
 
+    if(!empty($data["genreSearch"])){
+        $sql .= " OR musicGenre LIKE CONCAT('%', :musicGenre, '%')) ";
+        $bind[":musicGenre"] = $data["genreSearch"];
+    }
+
     if(!empty($data["subSearch"])){
-        $sql .= " OR musicSubDate LIKE CONCAT('%', :musicSubDate, '%') ";
+        $sql .= " AND musicSubDate >= :musicSubDate";
         $bind[":musicSubDate"] = $data["subSearch"];
     }
 
-    if(!empty($data["genreSearch"])){
-        $sql .= " OR musicGenre LIKE CONCAT('%', :musicGenre, '%') ";
-        $bind[":musicGenre"] = $data["genreSearch"];
-    }
 
     $sql .= " ORDER BY musicSubDate DESC";
 
