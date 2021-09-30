@@ -1,8 +1,12 @@
 <?php
 require "settings/init.php";
 
-$music = $db->sql("SELECT * FROM music WHERE musicID = 39");
+$id = $_GET["musicID"];
+
+$bind = [":musicID" => $id];
+$music = $db->sql("SELECT * FROM music WHERE musicID = :musicID", $bind);
 $music = $music[0];
+
 
 ?>
 

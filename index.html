@@ -22,24 +22,26 @@
 	<div class="music">
 		<div class="filter p-5">
 			<div class="row">
-				<div class="col-md-4 offset-md-4">
-					<input type="search" class="form-control titleSearch" placeholder="Search...">
+				<div class="col-md-4">
+					<input type="date" class="form-control subSearch">
+				</div>
+				<div class="col-md-8">
+					<input type="search" class="form-control titleSearch authorSearch genreSearch" placeholder="Search...">
 				</div>
 			</div>
 		</div>
+
+		<div class="items">
+			<!-- Her vises musikken! -->
+		</div>
+
 	</div>
-
-	<div class="items">
-		<!-- Her vises musikken! -->
-	</div>
-
-
 </div>
 
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script type="module">
-	import Music from"./js/music.js";
+	import Music from "./js/music.js";
 
 	const music = new Music();
 

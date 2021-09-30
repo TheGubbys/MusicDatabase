@@ -8,28 +8,30 @@ header('Content-Type: application/json; charset=utf-8');
 
 if(isset($data["password"]) && $data["password"] == "SuperSecretPassword1234") {
 
-    $sql = "SELECT * FROM music WHERE 1=1 ORDER BY musicSubDate DESC";
+    $sql = "SELECT * FROM music WHERE 1=1";
     $bind = [];
 
     if(!empty($data["titleSearch"])){
-        $sql = " AND musicTitle = :musicTitle ";
+        $sql .= " AND musicTitle LIKE CONCAT('%', :musicTitle, '%') ";
         $bind[":musicTitle"] = $data["titleSearch"];
     }
 
     if(!empty($data["authorSearch"])){
-        $sql = " AND musicAuthor = :musicAuthor ";
+        $sql .= " OR musicAuthor LIKE CONCAT('%', :musicAuthor, '%') ";
         $bind[":musicAuthor"] = $data["authorSearch"];
     }
 
     if(!empty($data["subSearch"])){
-        $sql = " AND musicSubDate = :musicSubDate ";
-        $bind[":musicSubDate"] = $data["musicSubDate"];
+        $sql .= " OR musicSubDate LIKE CONCAT('%', :musicSubDate, '%') ";
+        $bind[":musicSubDate"] = $data["subSearch"];
     }
 
     if(!empty($data["genreSearch"])){
-        $sql = " AND musicGenre = :musicGenre ";
-        $bind[":musicGenre"] = $data["musicGenre"];
+        $sql .= " OR musicGenre LIKE CONCAT('%', :musicGenre, '%') ";
+        $bind[":musicGenre"] = $data["genreSearch"];
     }
+
+    $sql .= " ORDER BY musicSubDate DESC";
 
 
     $music = $db->sql($sql, $bind);
