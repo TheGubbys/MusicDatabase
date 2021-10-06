@@ -42,3 +42,12 @@ img {
 	font-family: "Comfortaa";
 	font-weight: bold;
 }
+
+.background{
+	background-image: url("../bg.svg");
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+}

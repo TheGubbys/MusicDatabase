@@ -30,91 +30,92 @@ $music = $music[0];
 <body>
 
 <?php include 'header.php'; ?>
-
-<div class="container min-vh-100 p-3">
-    <div class="row">
-        <div class="col-12 pt-2">
-            <div class="col-12">
-                <img class="rounded mx-auto" alt="Cover Art" src="uploads/<?php
-                echo $music->musicArt;
-                ?>">
-            </div>
-            <div class="row text-center">
-                <div class="col-sm-6 col-12 my-auto pt-2">
-                    <h5>Created By</h5>
-                    <h4><?php
-                        echo $music->musicAuthor;
+<div class="background ">
+    <div class="container p-3">
+        <div class="row">
+            <div class="col-12 pt-2">
+                <div class="col-12">
+                    <img class="rounded mx-auto" alt="Cover Art" src="uploads/<?php
+                    echo $music->musicArt;
+                    ?>">
+                </div>
+                <div class="row text-center">
+                    <div class="col-sm-6 col-12 my-auto pt-2">
+                        <h5>Created By</h5>
+                        <h4><?php
+                            echo $music->musicAuthor;
+                            ?>
+                        </h4>
+                    </div>
+                    <div class="col-sm-6 col-12 my-auto pt-2">
+                        <h5>Title</h5>
+                        <h4><?php
+                            echo $music->musicTitle;
+                            ?>
+                        </h4>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-6 p-2">
+                        <p>Genre:</p>
+                    </div>
+                    <div class="col-6 p-2">
+                        <?php
+                        echo $music->musicGenre;
                         ?>
-                    </h4>
+                    </div>
                 </div>
-                <div class="col-sm-6 col-12 my-auto pt-2">
-                    <h5>Title</h5>
-                    <h4><?php
-                        echo $music->musicTitle;
+                <div class="row text-center">
+                    <div class="col-6 p-2">
+                        <p>Finished:</p>
+                    </div>
+                    <div class="col-6 p-2">
+                        <?php
+                        echo $music->musicFinDate;
                         ?>
-                    </h4>
+                    </div>
                 </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-6 p-2">
-                    <p>Genre:</p>
+                <div class="row text-center">
+                    <div class="col-6 p-2">
+                        <p>Submitted:</p>
+                    </div>
+                    <div class="col-6 p-2">
+                        <?php
+                        echo $music->musicSubDate;
+                        ?>
+                    </div>
                 </div>
-                <div class="col-6 p-2">
+                <div class="p-2 row text-center">
+                    <div class="d-flex justify-content-center">
+                        <h5>Source Material</h5>
+                    </div>
+                    <p class="p-2 text-center">
+                        <?php
+                        if(!empty($music->musicSource)){
+                            echo $music->musicSource;
+                        }else{
+                            echo "No source was provided";
+                        }
+                        ?>
+                    </p>
+                </div>
+                <div class="p-2 border-top border-bottom border-primary border-2">
+                    <h5 class="text-center">Description</h5>
                     <?php
-                    echo $music->musicGenre;
+                    echo $music->musicDesc;
                     ?>
                 </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-6 p-2">
-                    <p>Finished:</p>
-                </div>
-                <div class="col-6 p-2">
-                    <?php
-                    echo $music->musicFinDate;
-                    ?>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-6 p-2">
-                    <p>Submitted:</p>
-                </div>
-                <div class="col-6 p-2">
-                    <?php
-                    echo $music->musicSubDate;
-                    ?>
-                </div>
-            </div>
-            <div class="p-2 row text-center">
-                <div class="d-flex justify-content-center">
-                    <h5>Source Material</h5>
-                </div>
-                <p class="p-2 text-center">
-                    <?php
-                    if(!empty($music->musicSource)){
-                        echo $music->musicSource;
-                    }else{
-                        echo "No source was provided";
-                    }
-                    ?>
-                </p>
-            </div>
-            <div class="p-2 border-top border-bottom border-primary border-2">
-                <h5 class="text-center">Description</h5>
-                <?php
-                echo $music->musicDesc;
-                ?>
-            </div>
-            <div class="row text-center">
-                <div class="p-2 col-6">
-                    <a class="btn btn-lg btn-primary text-white" target="_blank" href="<?php
-                    echo $music->musicLink;
-                    ?>">Song Link</a>
-                </div>
-                <div class="p-2 col-6">
-                    <a class="btn btn-lg btn-primary text-white" href="<?php
-                    echo $music->musicSoMe;
-                    ?>">SoMe</a>
+                <div class="row text-center">
+                    <div class="p-2 col-6">
+                        <a class="btn btn-lg btn-primary text-white" target="_blank" href="<?php
+                        echo $music->musicLink;
+                        ?>">Song Link</a>
+                    </div>
+                    <div class="p-2 col-6">
+                        <a class="btn btn-lg btn-primary text-white" href="<?php
+                        echo $music->musicSoMe;
+                        ?>">SoMe</a>
+                    </div>
                 </div>
             </div>
         </div>
