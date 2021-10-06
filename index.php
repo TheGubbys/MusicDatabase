@@ -41,7 +41,7 @@
                 </div>
                 <div class="col-md-8 p-2">
                     <p class="text-center">Search Descriptions</p>
-                    <input type="search" class="form-control descSearch" placeholder="doesn't work...">
+                    <input type="search" class="form-control descSearch" placeholder="Search...">
                 </div>
             </div>
 		</div>

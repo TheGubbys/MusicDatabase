@@ -31,7 +31,10 @@ if(isset($data["password"]) && $data["password"] == "SuperSecretPassword1234") {
         $bind[":musicSubDate"] = $data["subSearch"];
     }
 
-
+    if(!empty($data["descSearch"])){
+        $sql .= " AND musicDesc LIKE CONCAT('%', :musicDesc, '%') ";
+        $bind[":musicDesc"] = $data["descSearch"];
+    }
 
     $sql .= " ORDER BY musicSubDate DESC";
 

@@ -31,10 +31,10 @@ $music = $music[0];
 
 <?php include 'header.php'; ?>
 
-<div class="container min-vh-100 p-3 bg-secondary">
+<div class="container min-vh-100 p-3">
     <div class="row">
         <div class="col-12 pt-2">
-            <div class="p-3 col-12">
+            <div class="col-12">
                 <img class="rounded mx-auto" alt="Cover Art" src="uploads/<?php
                 echo $music->musicArt;
                 ?>">
@@ -105,7 +105,7 @@ $music = $music[0];
             </div>
             <div class="row text-center">
                 <div class="p-2 col-6">
-                    <a class="btn btn-lg btn-primary text-white" href="<?php
+                    <a class="btn btn-lg btn-primary text-white" target="_blank" href="<?php
                     echo $music->musicLink;
                     ?>">Song Link</a>
                 </div>

@@ -13,6 +13,7 @@ export default class Music {
         this.authorSearch = this.filter.querySelector('.authorSearch')
         this.genreSearch = this.filter.querySelector('.genreSearch')
         this.subSearch = this.filter.querySelector('.subSearch')
+        this.descSearch = this.filter.querySelector('.descSearch')
     }
 
     async init(){
@@ -26,6 +27,9 @@ export default class Music {
             this.render();
         })
         this.subSearch.addEventListener('input', () => {
+            this.render();
+        })
+        this.descSearch.addEventListener('input', () => {
             this.render();
         })
 
@@ -66,6 +70,7 @@ export default class Music {
         this.data.authorSearch = this.authorSearch.value;
         this.data.genreSearch = this.genreSearch.value;
         this.data.subSearch = this.subSearch.value;
+        this.data.descSearch = this.descSearch.value;
 
         const response = await fetch('api.php', {
             method: "POST",
