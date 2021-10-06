@@ -30,7 +30,7 @@
 					<input type="date" class="form-control subSearch">
 				</div>
 				<div class="col-md-8 p-2">
-					<p class="text-center">Search Authors, Titles & Genres</p>
+					<p class="text-center">Search Authors & Titles</p>
 					<input type="search" class="form-control titleSearch authorSearch" placeholder="Search...">
 				</div>
 			</div>
