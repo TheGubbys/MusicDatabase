@@ -85,9 +85,11 @@ $music = $music[0];
                     ?>
                 </div>
             </div>
-            <div class="row text-center">
-                <h5>Source</h5>
-                <p class="text-center">
+            <div class="p-2 row text-center">
+                <div class="d-flex justify-content-center">
+                    <h5>Source Material</h5>
+                </div>
+                <p class="p-2 text-center">
                     <?php
                     if(!empty($music->musicSource)){
                         echo $music->musicSource;
@@ -118,6 +120,8 @@ $music = $music[0];
         </div>
     </div>
 </div>
+
+<?php include 'footer.php'; ?>
 
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
