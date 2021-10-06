@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	
-	<title>Sigende titel</title>
+	<title>Music Database</title>
 	
 	<meta name="robots" content="All">
 	<meta name="author" content="Udgiver">
@@ -19,28 +19,28 @@
 <body>
 
 <?php include 'topheader.php'; ?>
+<div class="background min-vh-100">
 
 <div class="container">
-
 	<div class="music">
 		<div class="filter p-5">
 			<div class="row">
 				<div class="col-md-4 p-2">
-					<p class="text-center">Search Sub-Date</p>
+					<p class="text-center text-white">Search Sub-Date</p>
 					<input type="date" class="form-control subSearch">
 				</div>
 				<div class="col-md-8 p-2">
-					<p class="text-center">Search Authors & Titles</p>
+					<p class="text-center text-white">Search Authors & Titles</p>
 					<input type="search" class="form-control titleSearch authorSearch" placeholder="Search...">
 				</div>
 			</div>
             <div class="row">
                 <div class="col-md-4 p-2">
-                    <p class="text-center">Search Genre</p>
+                    <p class="text-center text-white">Search Genre</p>
                     <input type="search" class="form-control genreSearch" placeholder="Search..."> <!--hvad fuck sker der???-->
                 </div>
                 <div class="col-md-8 p-2">
-                    <p class="text-center">Search Descriptions</p>
+                    <p class="text-center text-white">Search Descriptions</p>
                     <input type="search" class="form-control descSearch" placeholder="Search...">
                 </div>
             </div>
@@ -51,7 +51,7 @@
 		</div>
 	</div>
 </div>
-
+</div>
 <?php include 'footer.php'; ?>
 
 

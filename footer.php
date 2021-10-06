@@ -1,4 +1,4 @@
-<footer class="mt-auto bg-primary">
+<footer class="mt-auto bg-purple">
     <div class="container-fluid">
         <div class="row py-4 text-center text-white">
             <p>Website by TheGubbys (Denni R. L. Dinesen)</p>

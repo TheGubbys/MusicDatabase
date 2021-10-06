@@ -31,7 +31,7 @@ $music = $music[0];
 <body>
 
 <?php include 'header.php'; ?>
-<div class="background ">
+<div class="background min-vh-100">
     <div class="container p-3 text-white">
         <div class="row">
             <div class="col-12 pt-2">
@@ -113,7 +113,8 @@ $music = $music[0];
                         ?>">Song Link</a>
                     </div>
                     <div class="p-2 col-6">
-                        <a class="btn btn-lg btn-primary text-white" href="<?php
+                        <a class="btn btn-lg btn-primary text-white" href="
+                        <?php
                         echo $music->musicSoMe;
                         ?>">SoMe</a>
                     </div>

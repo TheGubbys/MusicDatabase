@@ -48,11 +48,11 @@ export default class Music {
 
 
             col.innerHTML = `
-                <div class="card border-0">
+                <div class="card border-0  card-color">
                     ${(item.musicArt) ? `<img class="card-img-top" src="uploads/${item.musicArt}">` : `<img class="card-img-top" src="uploads/noArt.jpg">`}
-                    <h5 class="text-center cardd-title">${item.musicTitle}</h5>
-                    <p class="pb-2 card-text">Composed by ${item.musicAuthor}</p>
-                    <a href="music.php?musicID=${item.musicID}" class="btn btn-primary text-white w-100">Learn more</a>
+                    <h5 class="text-center card-title text-white">${item.musicTitle}</h5>
+                    <p class="pb-2 card-text text-white px-2">Composed by ${item.musicAuthor}</p>
+                    <a href="music.php?musicID=${item.musicID}" class="btn text-white w-100">Learn more</a>
                 </div>
             `;
 
