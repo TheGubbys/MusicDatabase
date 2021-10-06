@@ -15,7 +15,7 @@ $music = $music[0];
 <head>
     <meta charset="utf-8">
 
-    <title>Specific Music</title>
+    <title> <?php echo $music->musicTitle . " - " . $id; ?></title>
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
@@ -28,6 +28,8 @@ $music = $music[0];
 </head>
 
 <body>
+
+<?php include 'header.php'; ?>
 
 <div class="container min-vh-100 p-3 bg-secondary">
     <div class="row">

@@ -12,7 +12,7 @@ if(isset($data["password"]) && $data["password"] == "SuperSecretPassword1234") {
     $bind = [];
 
     if(!empty($data["titleSearch"])){
-        $sql .= " AND (musicTitle LIKE CONCAT('%', :musicTitle, '%') ";
+        $sql .= " AND musicTitle LIKE CONCAT('%', :musicTitle, '%') ";
         $bind[":musicTitle"] = $data["titleSearch"];
     }
 
@@ -22,7 +22,7 @@ if(isset($data["password"]) && $data["password"] == "SuperSecretPassword1234") {
     }
 
     if(!empty($data["genreSearch"])){
-        $sql .= " OR musicGenre LIKE CONCAT('%', :musicGenre, '%')) ";
+        $sql .= " AND musicGenre LIKE CONCAT('%', :musicGenre, '%') ";
         $bind[":musicGenre"] = $data["genreSearch"];
     }
 
