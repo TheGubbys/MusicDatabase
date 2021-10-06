@@ -24,6 +24,7 @@ $music = $music[0];
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -31,7 +32,7 @@ $music = $music[0];
 
 <?php include 'header.php'; ?>
 <div class="background ">
-    <div class="container p-3">
+    <div class="container p-3 text-white">
         <div class="row">
             <div class="col-12 pt-2">
                 <div class="col-12">
