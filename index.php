@@ -37,7 +37,7 @@
             <div class="row">
                 <div class="col-md-4 p-2">
                     <p class="text-center">Search Genre</p>
-                    <input type="search" class="form-control genreSearch" placeholder="Search...">
+                    <input type="search" class="form-control genreSearch" placeholder="Search..."> <!--hvad fuck sker der???-->
                 </div>
                 <div class="col-md-8 p-2">
                     <p class="text-center">Search Descriptions</p>
