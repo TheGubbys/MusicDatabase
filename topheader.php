@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark text-white bg-blue sticky-top">
+<nav class="navbar navbar-expand-md navbar-dark text-white bg-blue sticky-top shadow">
     <div class="container">
         <a class="navbar-brand textstyle" href="index.php">
             <span>Music Database</span>
