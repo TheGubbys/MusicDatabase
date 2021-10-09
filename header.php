@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark text-white bg-blue sticky-top">
+<nav class="navbar navbar-expand-md navbar-dark text-white bg-blue sticky-top shadow">
     <div class="container fitheader">
         <a class="navbar-brand textstyle" href="index.php">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">
