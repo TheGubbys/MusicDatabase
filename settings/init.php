@@ -11,8 +11,8 @@ if(CONFIG_LIVE == 0){
 }else{
     $DB_SERVER = "mysql108.unoeuro.com";
     $DB_NAME = "gubby_dk_db";
-    $DB_USER = "";
-    $DB_PASS = "";
+    $DB_USER = "gubby_dk";
+    $DB_PASS = "6ph4t5H9Bgfe";
 }
 
 $db = new db($DB_SERVER, $DB_NAME, $DB_USER, $DB_PASS);

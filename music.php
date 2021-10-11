@@ -100,20 +100,20 @@ $music = $music[0];
                         ?>
                     </p>
                 </div>
-                <div class="p-2 border-top border-bottom border-primary border-2">
+                <div class="p-2 border-top border-bottom border-secondary border-2">
                     <h5 class="text-center">Description</h5>
                     <?php
                     echo $music->musicDesc;
                     ?>
                 </div>
-                <div class="row text-center">
+                <div class="row text-center p-2">
                     <div class="p-2 col-6">
-                        <a class="btn btn-lg btn-primary text-white" target="_blank" href="<?php
+                        <a class="btn btn-lg btn-secondary text-white" target="_blank" href="<?php
                         echo $music->musicLink;
                         ?>">Song Link</a>
                     </div>
                     <div class="p-2 col-6">
-                        <a class="btn btn-lg btn-primary text-white" href="
+                        <a class="btn btn-lg btn-secondary text-white" href="
                         <?php
                         echo $music->musicSoMe;
                         ?>">SoMe</a>
