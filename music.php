@@ -21,6 +21,7 @@ $music = $music[0];
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
 
+    <link rel="icon" type="image/svg+xml" href="./images/logo.svg">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 
